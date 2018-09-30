@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>This is Campground Page!</h1>
+                <p>View Our hand-picked campgrounds from all over the world</p>
+                <p>
+                    <a href="/campgrounds/new" class="btn btn-primary btn-lg">Add New Campground</a>
+                </p>
+                <p>
+                    <a href="/campgrounds/allphotos" class="btn btn-primary btn-lg">All Photos</a>
+                </p>
+            </div>
+        </header>
+        <!--<div class="container">-->
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+            <% campgrounds.forEach(function(campground){ %>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <figure class="figure img-thumbnail">
+                        <img src="<%= campground.image %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption"><h5><%= campground.name %></h5></figcaption>
+                        <p>
+                            <a href="/campgrounds/<%=campground._id%>" class="btn btn-primary">More info</a>
+                        </p>
+                    </figure>
+                    <!--<div class="img-thumbnail">-->
+                    <!--    <img class="img-fluid" src=" campground.image %>">-->
+                    <!--</div>-->
+                    <!--<div class="figure-caption">-->
+                    <!--    <h4> campground.name %></h4>-->
+                    <!--</div>-->
+                </div>
+            <% }); %>
+        </div>
+        <!--</div>-->
+    </div>
+<% include ../partials/footer %>

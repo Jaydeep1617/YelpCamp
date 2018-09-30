@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+<!--<form action="/login" method="POST">-->
+<!--    <input type="text" name="username" placeholder="Username">-->
+<!--    <input type="password" name="password" placeholder="password">-->
+<!--    <button>Login</button>-->
+<!--</form>-->
+<div class="container">
+    <h1 style="text-align:center;">Login</h1>
+    <div style="max-width:350px;margin:25px auto;">
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="password">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default btn-lg btn-block">Login</button>
+            </div>
+        </form>
+        <a href="/campgrounds">Go Back</a>
+    </div>
+</div>
+<% include ./partials/footer %>
